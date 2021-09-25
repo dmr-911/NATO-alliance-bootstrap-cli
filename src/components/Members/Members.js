@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
+import Header from '../Header/Header';
 import Member from '../Member/Member';
 
 const Members = () => {
     const [members, setMembers] = useState([]);
     const [newMembers, setNewMembers] = useState([]);
+    const [searched, setSearched] = useState([]);
 
     useEffect(() => {
         fetch('./members.JSON')
             .then(res => res.json())
-            .then(data => setMembers(data));
+            .then(data => {
+                setMembers(data);
+                setSearched(data);
+            });
     }, []);
 
     const handleAddToCart = member => {
@@ -17,11 +22,20 @@ const Members = () => {
         setNewMembers(newMember);
     }
 
+    const onSearch = name => {
+        const newMember = members.filter(member => member.name.toLowerCase().includes(name.toLowerCase()));
+        setSearched(newMember);
+    }
+
     return (
+        <>
+            <Header
+                onSearch={onSearch}
+            ></Header>
       <div className="container row mx-auto my-4">
         <div className="col-md-9">
         <div className="row row-cols-1 row-cols-md-3 g-4">          
-            {members.map((member) => (
+            {searched.map((member) => (
                 <Member
                     key={member.country}
                     member={member}
@@ -35,7 +49,8 @@ const Members = () => {
                     members={newMembers}
                 ></Cart>
         </div>
-      </div>
+            </div>
+            </>
     );
 };
 

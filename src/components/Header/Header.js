@@ -3,9 +3,8 @@ import nato from '../../images/nato.jpg'
 import './Header.css';
 
 const Header = (props) => {
-    const { handleSearch } = props;
     const onTextChange = event => {
-        handleSearch(event.target.value);
+        props.onSearch(event.target.value);
     }
     return (
         <div className="nato-bg rounded-bottom px-3 text-white container-fluid row">
