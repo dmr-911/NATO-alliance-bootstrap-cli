@@ -6,7 +6,7 @@ import './Member.css';
 const Member = (props) => {
     const { member } = props;
     const { name, country, role, salary, img, age } = member;
-    console.log(member);
+    // console.log(member);
     const cart = <FontAwesomeIcon icon={faShoppingCart} />;
     return (
       <div className="col">
@@ -18,7 +18,7 @@ const Member = (props) => {
             <p className="card-text">Country : {country}</p>
             <p className="card-text">Age : {age}</p>
             <p className="card-text">Salary : ${salary}</p>
-            <button type="button" class="btn btn-danger">
+            <button onClick={()=>props.handleAddToCart(member)} type="button" className="btn btn-danger">
                         {cart} Add to cart
             </button>
           </div>
