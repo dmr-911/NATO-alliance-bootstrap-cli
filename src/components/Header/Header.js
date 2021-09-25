@@ -2,10 +2,14 @@ import React from 'react';
 import nato from '../../images/nato.jpg'
 import './Header.css';
 
-const Header = () => {
+const Header = (props) => {
+    const { handleSearch } = props;
+    const onTextChange = event => {
+        handleSearch(event.target.value);
+    }
     return (
-        <div className="bg-dark rounded-bottom px-3 text-white container-fluid row">
-            <nav className="navbar navbar-dark bg-dark col-md-3">
+        <div className="nato-bg rounded-bottom px-3 text-white container-fluid row">
+            <nav className="navbar navbar-dark col-md-3">
                     <div className="container">
                         <a className="navbar-brand" href="/">
                         <img src={nato} className="rounded" alt="" width="100" height="64" />
@@ -18,7 +22,7 @@ const Header = () => {
             </div>
             <div className="col-md-4 d-flex align-items-center">
                 <div className="input-group mb-3">
-                    <input type="text" className="form-control" placeholder="Search members"/>
+                    <input onChange={onTextChange} type="text" className="form-control" placeholder="Search members"/>
                 </div>
             </div>
         </div>
