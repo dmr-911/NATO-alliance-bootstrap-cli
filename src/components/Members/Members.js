@@ -18,7 +18,7 @@ const Members = () => {
     }
 
     return (
-      <div className="container row mx-auto">
+      <div className="container row mx-auto my-4">
         <div className="col-md-9">
         <div className="row row-cols-1 row-cols-md-3 g-4">          
             {members.map((member) => (

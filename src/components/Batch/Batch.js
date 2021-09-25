@@ -1,15 +1,16 @@
 import React from 'react';
 
+
 const Batch = (props) => {
     const { member } = props;
     const { name, img } = member;
     return (
-      <div className="row">
+      <div className="row my-3 bg-info rounded py-2">
         <div className="col-6">
-          <img className="img-fluid" src={img} alt="" />
+          <img className="img-fluid rounded" src={img} alt="" />
         </div>
-        <div className="col-6">
-          <h4>{name}</h4>
+        <div className="col-6 d-flex align-items-center">
+          <h5 className="text-start">{name}</h5>
         </div>
       </div>
     );

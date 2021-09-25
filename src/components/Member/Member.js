@@ -11,15 +11,23 @@ const Member = (props) => {
     return (
       <div className="col">
         <div className="card">
-          <img src={img} className="card-img-top card-image" alt="..." />
+          <img
+            src={img}
+            className="card-img-top card-image rounded-circle"
+            alt="..."
+          />
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
             <h6>Role : {role}</h6>
             <p className="card-text">Country : {country}</p>
             <p className="card-text">Age : {age}</p>
             <p className="card-text">Salary : ${salary}</p>
-            <button onClick={()=>props.handleAddToCart(member)} type="button" className="btn btn-danger">
-                        {cart} Add to cart
+            <button
+              onClick={() => props.handleAddToCart(member)}
+              type="button"
+              className="btn btn-danger"
+            >
+              {cart} Add to cart
             </button>
           </div>
         </div>
