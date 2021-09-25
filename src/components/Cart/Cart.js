@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faMoneyBill } from "@fortawesome/free-solid-svg-icons";
 import Batch from '../Batch/Batch';
 
 const Cart = (props) => {
@@ -9,18 +9,22 @@ const Cart = (props) => {
     const reducer = (previous, current) => previous + current.salary;
     const totalSalary = members.reduce(reducer, 0);
 
-    const user = <FontAwesomeIcon icon={faUser} />;
+    const user = <FontAwesomeIcon className="text-danger" icon={faUser} />;
+    const money = <FontAwesomeIcon className="text-success" icon={faMoneyBill} />;
     return (
-      <div>
+      <div className="border-start border-3 border-info">
         <h4 className="text-success">
           <small className="text-primary">{user} Members Added</small> :{" "}
           {members.length}
         </h4>
         <h4 className="text-danger">
-          <small className="text-primary">Total Salary :</small> $ {totalSalary}
+          <small className="text-primary">{money} Total Salary :</small> ${totalSalary}
         </h4>
         {members.map((member) => (
-          <Batch member={member}></Batch>
+          <Batch
+            key={member.id}
+            className="batch"
+            member={member}></Batch>
         ))}
       </div>
     );

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Header from '../Header/Header';
 import Member from '../Member/Member';
+import './Members.css';
 
 const Members = () => {
     const [members, setMembers] = useState([]);
@@ -45,7 +46,7 @@ const Members = () => {
           </div>
         </div>
         <div className="col-md-3">
-                <Cart
+            <Cart
                     members={newMembers}
                 ></Cart>
         </div>

@@ -7,7 +7,7 @@ const Header = (props) => {
         props.onSearch(event.target.value);
     }
     return (
-        <div className="nato-bg rounded-bottom px-3 text-white container-fluid row">
+        <div className="nato-bg rounded-bottom text-white container-fluid row m-0">
             <nav className="navbar navbar-dark col-md-3">
                     <div className="container">
                         <a className="navbar-brand" href="/">
@@ -17,7 +17,7 @@ const Header = (props) => {
             </nav>
             <div className="col-md-5">
                 <h2><span className="text-info">NATO</span> alliance</h2>
-                <h5>Total Budget : <b className="text-warning">$ 1 Billion</b></h5>
+                <h5>Total Budget per Year : <b className="text-warning">$ 1 Billion</b></h5>
             </div>
             <div className="col-md-4 d-flex align-items-center">
                 <div className="input-group mb-3">
