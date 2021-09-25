@@ -10,10 +10,10 @@ const Member = (props) => {
     const cart = <FontAwesomeIcon icon={faShoppingCart} />;
     return (
       <div className="col">
-        <div className="card">
+        <div className="card pt-2 border border-1 border-info">
           <img
             src={img}
-            className="card-img-top card-image rounded-circle"
+            className="card-img-top card-image rounded-circle px-3"
             alt="..."
           />
           <div className="card-body">

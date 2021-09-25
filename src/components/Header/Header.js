@@ -1,12 +1,26 @@
 import React from 'react';
+import nato from '../../images/nato.jpg'
 import './Header.css';
 
 const Header = () => {
     return (
-        <div className="bg-dark rounded-bottom pb-3 text-white">
-            <h2>Make a strong NATO alliance</h2>
-            <p>Day by day the world is going to face a danger of global warming and new super Powers,NATO has to take immidiate actions to save the world.</p>
-            <h2>Total Budget : <b>$ 1 Billion</b></h2>
+        <div className="bg-dark rounded-bottom px-3 text-white container-fluid row">
+            <nav className="navbar navbar-dark bg-dark col-md-3">
+                    <div className="container">
+                        <a className="navbar-brand" href="/">
+                        <img src={nato} className="rounded" alt="" width="100" height="64" />
+                        </a>
+                    </div>
+            </nav>
+            <div className="col-md-5">
+                <h2><span className="text-info">NATO</span> alliance</h2>
+                <h5>Total Budget : <b className="text-warning">$ 1 Billion</b></h5>
+            </div>
+            <div className="col-md-4 d-flex align-items-center">
+                <div className="input-group mb-3">
+                    <input type="text" className="form-control" placeholder="Search members"/>
+                </div>
+            </div>
         </div>
     );
 };
