@@ -27,7 +27,7 @@ const Member = (props) => {
               type="button"
               className="btn btn-danger"
             >
-              {cart} Add to cart
+              {cart} Add Member
             </button>
           </div>
         </div>
