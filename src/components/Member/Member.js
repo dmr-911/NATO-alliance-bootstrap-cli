@@ -6,10 +6,12 @@ import './Member.css';
 const Member = (props) => {
     const { member } = props;
     const { name, country, role, salary, img, age } = member;
-    // console.log(member);
+    
+  // font awesome icons
     const cart = <FontAwesomeIcon className="text-warning" icon={faShoppingCart} />;
     const money = <FontAwesomeIcon className="text-danger" icon={faMoneyBill} />;
-    return (
+    
+  return (
       <div className="col">
         <div className="card pt-2 border border-2 border-info member">
           <img

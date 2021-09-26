@@ -5,6 +5,7 @@ import Member from '../Member/Member';
 import './Members.css';
 
 const Members = () => {
+  // useEffect,useState hooks
     const [members, setMembers] = useState([]);
     const [newMembers, setNewMembers] = useState([]);
     const [searched, setSearched] = useState([]);
@@ -18,6 +19,7 @@ const Members = () => {
             });
     }, []);
 
+  // Add to cart button handler 
     const handleAddToCart = member => {
         let newMember = [...newMembers];
         if (newMembers.indexOf(member) === -1) {
@@ -26,6 +28,7 @@ const Members = () => {
         setNewMembers(newMember);
     }
 
+  // Searchbar handler 
     const onSearch = name => {
         const newMember = members.filter(member => member.name.toLowerCase().includes(name.toLowerCase()));
         setSearched(newMember);
@@ -34,6 +37,7 @@ const Members = () => {
     return (
       <>
         <Header onSearch={onSearch}></Header>
+        {/* members and side cart  */}
             <div className="container row mx-auto my-4">
           <div className=" col-md-9 shadow-lg py-2 rounded members-container">
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2">

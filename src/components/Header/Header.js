@@ -2,6 +2,7 @@ import React from 'react';
 import nato from '../../images/nato.jpg'
 import './Header.css';
 
+// On add to member button clicked
 const Header = (props) => {
     const onTextChange = event => {
         props.onSearch(event.target.value);
@@ -9,7 +10,7 @@ const Header = (props) => {
     return (
         <div className="nato-bg rounded-bottom text-white container-fluid row m-0">
             <nav className="navbar navbar-dark col-md-3">
-                    <div className="container">
+                    <div className="container image-container">
                         <a className="navbar-brand" href="/">
                         <img src={nato} className="rounded" alt="" width="100" height="64" />
                         </a>
