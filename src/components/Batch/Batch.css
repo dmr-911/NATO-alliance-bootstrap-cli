@@ -2,3 +2,7 @@
     margin: 0;
     background-color: rgb(17, 17, 53);
 }
+.batch img{
+    height: 50px;
+    width: 100px;
+}

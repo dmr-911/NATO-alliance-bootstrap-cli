@@ -19,7 +19,10 @@ const Members = () => {
     }, []);
 
     const handleAddToCart = member => {
-        const newMember = [...newMembers, member];
+        let newMember = [...newMembers];
+        if (newMembers.indexOf(member) === -1) {
+            newMember.push(member);
+        }
         setNewMembers(newMember);
     }
 
