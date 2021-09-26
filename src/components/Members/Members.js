@@ -31,9 +31,9 @@ const Members = () => {
     return (
       <>
         <Header onSearch={onSearch}></Header>
-        <div className="container row mx-auto my-4">
-          <div className="col-md-9 shadow-lg py-2 rounded members-container">
-            <div className="row row-cols-1 row-cols-md-3 g-4">
+            <div className="container row mx-auto my-4">
+          <div className=" col-md-9 shadow-lg py-2 rounded members-container">
+            <div className="row row-cols-1 row-cols-md-3 g-2">
               {searched.map((member) => (
                 <Member
                   key={member.country}

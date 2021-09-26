@@ -3,6 +3,7 @@
 }
 .member{
     transition: background-color 1s;
+    line-height: .6rem;
 }
 .member:hover{
     background-color: rgb(17, 17, 53);
