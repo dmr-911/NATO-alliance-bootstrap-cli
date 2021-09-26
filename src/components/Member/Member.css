@@ -1,3 +1,10 @@
 .card-image{
     height: 200px;
 }
+.member{
+    transition: background-color 1s;
+}
+.member:hover{
+    background-color: rgb(17, 17, 53);
+    color: white;
+}

@@ -16,7 +16,7 @@ const Header = (props) => {
                     </div>
             </nav>
             <div className="col-md-5">
-                <h2><span className="text-info">NATO</span> alliance</h2>
+                <h2><span className="text-info">NATO</span> Alliance</h2>
                 <h5>Total Budget per Year : <b className="text-warning">$ 1 Billion</b></h5>
             </div>
             <div className="col-md-4 d-flex align-items-center">

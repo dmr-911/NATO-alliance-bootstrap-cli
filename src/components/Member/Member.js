@@ -8,10 +8,10 @@ const Member = (props) => {
     const { name, country, role, salary, img, age } = member;
     // console.log(member);
     const cart = <FontAwesomeIcon className="text-warning" icon={faShoppingCart} />;
-    const money = <FontAwesomeIcon className="text-success" icon={faMoneyBill} />;
+    const money = <FontAwesomeIcon className="text-danger" icon={faMoneyBill} />;
     return (
       <div className="col">
-        <div className="card pt-2 border border-2 border-info">
+        <div className="card pt-2 border border-2 border-info member">
           <img
             src={img}
             className="card-img-top card-image rounded-circle px-3"
@@ -22,7 +22,9 @@ const Member = (props) => {
             <h6>Role : {role}</h6>
             <p className="card-text">Country : {country}</p>
             <p className="card-text">Age : {age}</p>
-            <p className="card-text">Salary : {money} ${salary}</p>
+            <p className="card-text">
+              Salary : {money} ${salary}
+            </p>
             <button
               onClick={() => props.handleAddToCart(member)}
               type="button"
