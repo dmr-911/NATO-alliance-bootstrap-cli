@@ -1,6 +1,6 @@
 # NATO Alliance spi website
 
-This project was bootstrapped with [Visit site](https://nato-alliance-react-bootstrap.netlify.app/).
+Here is the link of the site :  [NATO Alliance spa](https://nato-alliance-react-bootstrap.netlify.app/).
 
 ## Features
  => Built a strong NATO alliance by adding country heads clicking Add Member button
